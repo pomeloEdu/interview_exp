@@ -9,7 +9,7 @@ const rootDir = path.join(__dirname, 'docs');
 const parseBar = () => {
   const result: Array<{
     text: string;
-    link: string
+    link: string;
   }> = [];
   fs.readdirSync(rootDir).map((file) => {
     const filePath = path.join(rootDir, file);
