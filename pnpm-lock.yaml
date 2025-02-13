@@ -18,9 +18,6 @@ importers:
         specifier: 1.41.2
         version: 1.41.2(webpack@5.97.1)
     devDependencies:
-      '@commitlint/cz-commitlint':
-        specifier: 19.6.1
-        version: 19.6.1(@types/node@22.13.2)(commitizen@4.3.1(@types/node@22.13.2)(typescript@5.7.3))(inquirer@8.2.5)(typescript@5.7.3)
       '@eslint/js':
         specifier: 9.20.0
         version: 9.20.0
@@ -33,6 +30,9 @@ importers:
       commitizen:
         specifier: 4.3.1
         version: 4.3.1(@types/node@22.13.2)(typescript@5.7.3)
+      cz-conventional-changelog:
+        specifier: 3.3.0
+        version: 3.3.0(@types/node@22.13.2)(typescript@5.7.3)
       eslint:
         specifier: 9.20.1
         version: 9.20.1(jiti@2.4.2)
@@ -68,17 +68,6 @@ packages:
 
   '@commitlint/config-validator@19.5.0':
     resolution: {integrity: sha512-CHtj92H5rdhKt17RmgALhfQt95VayrUo2tSqY9g2w+laAXyk7K/Ef6uPm9tn5qSIwSmrLjKaXK9eiNuxmQrDBw==}
-    engines: {node: '>=v18'}
-
-  '@commitlint/cz-commitlint@19.6.1':
-    resolution: {integrity: sha512-lJtOE1a+xyjjf42oUXwqvmhLhF85OLqLE4LpcUifIdIxSbzx8lEbhwGDkhrOaYfGtjmtTDhP1cQ8dg5DyQOWqQ==}
-    engines: {node: '>=v18'}
-    peerDependencies:
-      commitizen: ^4.0.3
-      inquirer: ^9.0.0
-
-  '@commitlint/ensure@19.5.0':
-    resolution: {integrity: sha512-Kv0pYZeMrdg48bHFEU5KKcccRfKmISSm9MvgIgkpI6m+ohFTB55qZlBW6eYqh/XDfRuIO0x4zSmvBjmOwWTwkg==}
     engines: {node: '>=v18'}
 
   '@commitlint/execute-rule@19.5.0':
@@ -1515,14 +1504,8 @@ packages:
   lodash-es@4.17.21:
     resolution: {integrity: sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==}
 
-  lodash.camelcase@4.3.0:
-    resolution: {integrity: sha512-TwuEnCnxbc3rAvhf/LbG7tJUDzhqXyFnv3dtzLOPgCG/hODL7WFnsbwktkD7yUV0RrreP/l1PALq/YSg6VvjlA==}
-
   lodash.isplainobject@4.0.6:
     resolution: {integrity: sha512-oSXzaWypCMHkPC3NvBEaPHf0KsA5mvPrOPgQWDsbg8n7orZ290M0BmC/jgRZ4vcJ6DTAhjrsSYgdsW/F+MFOBA==}
-
-  lodash.kebabcase@4.1.1:
-    resolution: {integrity: sha512-N8XRTIMMqqDgSy4VLKPnJ/+hpGZN+PHQiJnSenYqPaVV/NCqEogTnAdZLQiGKhxX+JCs8waWq2t1XHWKOmlY8g==}
 
   lodash.map@4.6.0:
     resolution: {integrity: sha512-worNHGKLDetmcEYDvh2stPCrrQRkP20E4l0iIS7F8EvzMqBBi7ltvFN5m1HvTf1P7Jk1txKhvFcmYsCr8O2F1Q==}
@@ -1533,17 +1516,8 @@ packages:
   lodash.mergewith@4.6.2:
     resolution: {integrity: sha512-GK3g5RPZWTRSeLSpgP8Xhra+pnjBC56q9FZYe1d5RN3TJ35dbkGy3YqBSMbyCrlbi+CM9Z3Jk5yTL7RCsqboyQ==}
 
-  lodash.snakecase@4.1.1:
-    resolution: {integrity: sha512-QZ1d4xoBHYUeuouhEq3lk3Uq7ldgyFXGBhg04+oRLnIz8o9T65Eh+8YdroUwn846zchkA9yDsDl5CVVaV2nqYw==}
-
-  lodash.startcase@4.4.0:
-    resolution: {integrity: sha512-+WKqsK294HMSc2jEbNgpHpd0JfIBhp7rEV4aqXWqFr6AlXov+SlcgB1Fv01y2kGe3Gc8nMW7VA0SrGuSkRfIEg==}
-
   lodash.uniq@4.5.0:
     resolution: {integrity: sha512-xfBaXQd9ryd9dlSDvnvI0lvxfLJlYAZzXomUYzLKtUeOQvOP5piqAWuGtrhWeqaXK9hhoM/iyJc5AV+XfsX3HQ==}
-
-  lodash.upperfirst@4.3.1:
-    resolution: {integrity: sha512-sReKOYJIJf74dhJONhU4e0/shzi1trVbSWDOhKYE5XV2O+H7Sb2Dihwuc7xWxVl+DgFPyTqIN3zMfT9cq5iWDg==}
 
   lodash@4.17.21:
     resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}
@@ -2574,8 +2548,10 @@ snapshots:
       '@babel/helper-validator-identifier': 7.25.9
       js-tokens: 4.0.0
       picocolors: 1.1.1
+    optional: true
 
-  '@babel/helper-validator-identifier@7.25.9': {}
+  '@babel/helper-validator-identifier@7.25.9':
+    optional: true
 
   '@babel/runtime@7.26.7':
     dependencies:
@@ -2587,31 +2563,10 @@ snapshots:
     dependencies:
       '@commitlint/types': 19.5.0
       ajv: 8.17.1
+    optional: true
 
-  '@commitlint/cz-commitlint@19.6.1(@types/node@22.13.2)(commitizen@4.3.1(@types/node@22.13.2)(typescript@5.7.3))(inquirer@8.2.5)(typescript@5.7.3)':
-    dependencies:
-      '@commitlint/ensure': 19.5.0
-      '@commitlint/load': 19.6.1(@types/node@22.13.2)(typescript@5.7.3)
-      '@commitlint/types': 19.5.0
-      chalk: 5.4.1
-      commitizen: 4.3.1(@types/node@22.13.2)(typescript@5.7.3)
-      inquirer: 8.2.5
-      lodash.isplainobject: 4.0.6
-      word-wrap: 1.2.5
-    transitivePeerDependencies:
-      - '@types/node'
-      - typescript
-
-  '@commitlint/ensure@19.5.0':
-    dependencies:
-      '@commitlint/types': 19.5.0
-      lodash.camelcase: 4.3.0
-      lodash.kebabcase: 4.1.1
-      lodash.snakecase: 4.1.1
-      lodash.startcase: 4.4.0
-      lodash.upperfirst: 4.3.1
-
-  '@commitlint/execute-rule@19.5.0': {}
+  '@commitlint/execute-rule@19.5.0':
+    optional: true
 
   '@commitlint/load@19.6.1(@types/node@22.13.2)(typescript@5.7.3)':
     dependencies:
@@ -2628,6 +2583,7 @@ snapshots:
     transitivePeerDependencies:
       - '@types/node'
       - typescript
+    optional: true
 
   '@commitlint/resolve-extends@19.5.0':
     dependencies:
@@ -2637,11 +2593,13 @@ snapshots:
       import-meta-resolve: 4.1.0
       lodash.mergewith: 4.6.2
       resolve-from: 5.0.0
+    optional: true
 
   '@commitlint/types@19.5.0':
     dependencies:
       '@types/conventional-commits-parser': 5.0.1
       chalk: 5.4.1
+    optional: true
 
   '@eslint-community/eslint-utils@4.4.1(eslint@9.20.1(jiti@2.4.2))':
     dependencies:
@@ -3055,6 +3013,7 @@ snapshots:
   '@types/conventional-commits-parser@5.0.1':
     dependencies:
       '@types/node': 22.13.2
+    optional: true
 
   '@types/debug@4.1.12':
     dependencies:
@@ -3406,7 +3365,8 @@ snapshots:
       ansi-styles: 4.3.0
       supports-color: 7.2.0
 
-  chalk@5.4.1: {}
+  chalk@5.4.1:
+    optional: true
 
   character-entities-html4@2.1.0: {}
 
@@ -3527,6 +3487,7 @@ snapshots:
       cosmiconfig: 9.0.0(typescript@5.7.3)
       jiti: 2.4.2
       typescript: 5.7.3
+    optional: true
 
   cosmiconfig@9.0.0(typescript@5.7.3):
     dependencies:
@@ -3536,6 +3497,7 @@ snapshots:
       parse-json: 5.2.0
     optionalDependencies:
       typescript: 5.7.3
+    optional: true
 
   cross-spawn@7.0.6:
     dependencies:
@@ -3658,11 +3620,13 @@ snapshots:
 
   entities@4.5.0: {}
 
-  env-paths@2.2.1: {}
+  env-paths@2.2.1:
+    optional: true
 
   error-ex@1.3.2:
     dependencies:
       is-arrayish: 0.2.1
+    optional: true
 
   error-stack-parser@2.1.4:
     dependencies:
@@ -3912,6 +3876,7 @@ snapshots:
   global-directory@4.0.1:
     dependencies:
       ini: 4.1.1
+    optional: true
 
   global-modules@1.0.0:
     dependencies:
@@ -4086,7 +4051,8 @@ snapshots:
       parent-module: 1.0.1
       resolve-from: 4.0.0
 
-  import-meta-resolve@4.1.0: {}
+  import-meta-resolve@4.1.0:
+    optional: true
 
   imurmurhash@0.1.4: {}
 
@@ -4099,7 +4065,8 @@ snapshots:
 
   ini@1.3.8: {}
 
-  ini@4.1.1: {}
+  ini@4.1.1:
+    optional: true
 
   inline-style-parser@0.1.1: {}
 
@@ -4141,7 +4108,8 @@ snapshots:
       is-alphabetical: 2.0.1
       is-decimal: 2.0.1
 
-  is-arrayish@0.2.1: {}
+  is-arrayish@0.2.1:
+    optional: true
 
   is-binary-path@2.1.0:
     dependencies:
@@ -4193,7 +4161,8 @@ snapshots:
       merge-stream: 2.0.0
       supports-color: 8.1.1
 
-  jiti@2.4.2: {}
+  jiti@2.4.2:
+    optional: true
 
   js-tokens@4.0.0: {}
 
@@ -4239,7 +4208,8 @@ snapshots:
       prelude-ls: 1.2.1
       type-check: 0.4.0
 
-  lines-and-columns@1.2.4: {}
+  lines-and-columns@1.2.4:
+    optional: true
 
   linkify-it@5.0.0:
     dependencies:
@@ -4259,25 +4229,18 @@ snapshots:
 
   lodash-es@4.17.21: {}
 
-  lodash.camelcase@4.3.0: {}
-
-  lodash.isplainobject@4.0.6: {}
-
-  lodash.kebabcase@4.1.1: {}
+  lodash.isplainobject@4.0.6:
+    optional: true
 
   lodash.map@4.6.0: {}
 
   lodash.merge@4.6.2: {}
 
-  lodash.mergewith@4.6.2: {}
+  lodash.mergewith@4.6.2:
+    optional: true
 
-  lodash.snakecase@4.1.1: {}
-
-  lodash.startcase@4.4.0: {}
-
-  lodash.uniq@4.5.0: {}
-
-  lodash.upperfirst@4.3.1: {}
+  lodash.uniq@4.5.0:
+    optional: true
 
   lodash@4.17.21: {}
 
@@ -4860,6 +4823,7 @@ snapshots:
       error-ex: 1.3.2
       json-parse-even-better-errors: 2.3.1
       lines-and-columns: 1.2.4
+    optional: true
 
   parse-passwd@1.0.0: {}
 
@@ -5071,7 +5035,8 @@ snapshots:
 
   resolve-from@4.0.0: {}
 
-  resolve-from@5.0.0: {}
+  resolve-from@5.0.0:
+    optional: true
 
   restore-cursor@3.1.0:
     dependencies:
