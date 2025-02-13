@@ -7,7 +7,10 @@ import { defineConfig } from 'rspress/config';
 const rootDir = path.join(__dirname, 'docs');
 
 const parseBar = () => {
-  const result = new Array();
+  const result: Array<{
+    text: string;
+    link: string
+  }> = [];
   fs.readdirSync(rootDir).map((file) => {
     const filePath = path.join(rootDir, file);
     const fileContent = fs.readFileSync(filePath, 'utf-8');
