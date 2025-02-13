@@ -11,8 +11,9 @@ const parseBar = () => {
     text: string;
     link: string;
   }> = [];
-  fs.readdirSync(rootDir).map((file) => {
-    const filePath = path.join(rootDir, file);
+  const interviewDir = path.join(rootDir, 'interview');
+  fs.readdirSync(interviewDir).map((file) => {
+    const filePath = path.join(interviewDir, file);
     const fileContent = fs.readFileSync(filePath, 'utf-8');
     const md = markdownit();
     const htmlStr = md.render(fileContent);
@@ -20,7 +21,7 @@ const parseBar = () => {
     const title = $('h1').text();
     result.push({
       text: title,
-      link: `/${file.replace('.md', '')}`,
+      link: `/interview/${file.replace('.md', '')}`,
     });
   });
   return result;
@@ -51,7 +52,16 @@ export default defineConfig({
   },
   themeConfig: {
     sidebar: {
-      '/': barContent,
+      '/': [
+        {
+          text: '面试',
+          link: '/index',
+        },
+        {
+          text: '面试11',
+          items: barContent,
+        },
+      ],
     },
     lastUpdated: true,
     ...chineseText,
