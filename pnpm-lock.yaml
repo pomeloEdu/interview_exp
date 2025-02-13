@@ -9,26 +9,26 @@ importers:
   .:
     dependencies:
       rspress:
-        specifier: ^1.40.2
+        specifier: 1.41.2
         version: 1.41.2(webpack@5.97.1)
     devDependencies:
       '@eslint/js':
-        specifier: ^9.19.0
+        specifier: 9.20.0
         version: 9.20.0
       '@types/node':
-        specifier: ^18.11.17
-        version: 18.19.75
+        specifier: 22.13.2
+        version: 22.13.2
       eslint:
-        specifier: ^9.19.0
+        specifier: 9.20.1
         version: 9.20.1
       globals:
-        specifier: ^15.14.0
+        specifier: 15.15.0
         version: 15.15.0
       prettier:
-        specifier: ^3.4.2
-        version: 3.5.0
+        specifier: 3.5.1
+        version: 3.5.1
       typescript-eslint:
-        specifier: ^8.22.0
+        specifier: 8.24.0
         version: 8.24.0(eslint@9.20.1)(typescript@5.7.3)
 
 packages:
@@ -404,8 +404,8 @@ packages:
   '@types/ms@2.1.0':
     resolution: {integrity: sha512-GsCCIZDE/p3i96vtEqx+7dBUGXrc7zeSK3wwPHIaRThS+9OhWIXRqzs4d6k1SVU8g91DrNRWxWUGhp5KXQb2VA==}
 
-  '@types/node@18.19.75':
-    resolution: {integrity: sha512-UIksWtThob6ZVSyxcOqCLOUNg/dyO1Qvx4McgeuhrEtHTLFTf7BBhEazaE4K806FGTPtzd/2sE90qn4fVr7cyw==}
+  '@types/node@22.13.2':
+    resolution: {integrity: sha512-Z+r8y3XL9ZpI2EY52YYygAFmo2/oWfNSj4BCpAXE2McAexDk8VcnBMGC9Djn9gTKt4d2T/hhXqmPzo4hfIXtTg==}
 
   '@types/react@19.0.8':
     resolution: {integrity: sha512-9P/o1IGdfmQxrujGbIMDyYaaCykhLKc0NGCtYcECNUr9UAaDe4gwvV9bR6tvd5Br1SG0j+PBpbKr2UYY8CwqSw==}
@@ -1484,8 +1484,8 @@ packages:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
     engines: {node: '>= 0.8.0'}
 
-  prettier@3.5.0:
-    resolution: {integrity: sha512-quyMrVt6svPS7CjQ9gKb3GLEX/rl3BCL2oa/QkNcXv4YNVBC9olt3s+H7ukto06q7B1Qz46PbrKLO34PR6vXcA==}
+  prettier@3.5.1:
+    resolution: {integrity: sha512-hPpFQvHwL3Qv5AdRvBFMhnKo4tYxp0ReXiPn2bxkiohEX6mBeBwEpBSQTkD458RaaDKQMYSp4hX4UtfUTA5wDw==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -1926,8 +1926,8 @@ packages:
     engines: {node: '>=14.17'}
     hasBin: true
 
-  undici-types@5.26.5:
-    resolution: {integrity: sha512-JlCMO+ehdEIKqlFxk6IfVoAUVmgz7cU7zD/h9XZ0qzeosSHmUJVOzSQvvYSYWXkFXC+IfLKSIffhv0sVZup6pA==}
+  undici-types@6.20.0:
+    resolution: {integrity: sha512-Ny6QZ2Nju20vw1SRHe3d9jVu6gJ+4e3+MMpqu7pqE5HT6WsTSlce++GQmK5UXS8mzV8DSYHrQH+Xrf2jVcuKNg==}
 
   unified@10.1.2:
     resolution: {integrity: sha512-pUSWAi/RAnVy1Pif2kAoeWNBa3JVrx0MId2LASj8G+7AiHWoKZNTomq6LG326T68U7/e263X6fTdcXIy7XnF7Q==}
@@ -2503,9 +2503,9 @@ snapshots:
 
   '@types/ms@2.1.0': {}
 
-  '@types/node@18.19.75':
+  '@types/node@22.13.2':
     dependencies:
-      undici-types: 5.26.5
+      undici-types: 6.20.0
 
   '@types/react@19.0.8':
     dependencies:
@@ -3290,7 +3290,7 @@ snapshots:
 
   jest-worker@27.5.1:
     dependencies:
-      '@types/node': 18.19.75
+      '@types/node': 22.13.2
       merge-stream: 2.0.0
       supports-color: 8.1.1
 
@@ -3910,7 +3910,7 @@ snapshots:
 
   prelude-ls@1.2.1: {}
 
-  prettier@3.5.0: {}
+  prettier@3.5.1: {}
 
   prismjs@1.27.0: {}
 
@@ -4333,7 +4333,7 @@ snapshots:
 
   typescript@5.7.3: {}
 
-  undici-types@5.26.5: {}
+  undici-types@6.20.0: {}
 
   unified@10.1.2:
     dependencies:
