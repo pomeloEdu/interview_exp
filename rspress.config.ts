@@ -39,6 +39,7 @@ const chineseText = {
 
 export default defineConfig({
   root: rootDir,
+  base: '/interview_exp/',
   title: '柠檬教育的面经合集',
   description: '搜集全网1000+的面经进行整理展示',
   mediumZoom: true,
